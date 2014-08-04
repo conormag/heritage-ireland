@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Heritage</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{BASE_TAG}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/heritage.css">
+  </head>
+  <body>
+    <script>
+      window.HeritageENV = {{ENV}};
+      window.EmberENV = window.HeritageENV.EmberENV;
+    </script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/heritage.js"></script>
+    <script>
+      window.Heritage = require('heritage/app')['default'].create(HeritageENV.APP);
+    </script>
+  </body>
+</html>
